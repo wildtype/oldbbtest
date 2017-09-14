@@ -1,0 +1,21 @@
+<html>
+  <script>
+  </script>
+  <body>
+    <div class="picture-wrapper js-component-volatile" data-component="ProgressivePicture" style="padding-top: 0; overflow: hidden;">
+      <div class="picture__placeholder picture__placeholder--wide"></div>
+      <img data-src="" class="picture__small picture__small_wide" src="" />
+      <img class="picture__big picture__big_wide" src="https://www.flooringvillage.co.uk/ekmps/shops/flooringvillage/images/request-a-sample--547-p.jpg" />
+      <picture>
+        <source data-srcset="http://thumbor.dev:8080/pr1K7CGcjQqqzpn0Wbt3Ha28mlo=/328x184/smart/filters:quality(88):format(webp)/bbmnews-media-staging/uploads/article/primary_image/5/dff604fb1ca94f8f.jpg 1x, http://thumbor.dev:8080/nLHjYL8RbO7XIjcw5aZv0NxcjNA=/656x368/smart/filters:quality(88):format(webp)/bbmnews-media-staging/uploads/article/primary_image/5/dff604fb1ca94f8f.jpg 2x" type="image/webp" />
+        <source data-srcset="https://lorempixel.com/output/animals-q-c-640-480-10.jpg" />
+        <img src="" />
+      </picture>
+    </div>
+    <script>
+      var source = Array.prototype.slice.call(document.querySelectorAll('picture > source'));
+      var image = document.querySelector('.picture__big');
+      image.src = source[1].dataset.srcset;
+    </script>
+   </body>
+ </html>
