@@ -13,9 +13,11 @@
       </picture>
     </div>
     <script>
-      var source = Array.prototype.slice.call(document.querySelectorAll('picture > source'));
-      var image = document.querySelector('.picture__big');
-      image.src = source[1].dataset.srcset;
+      document.addEventListener('DOMContentLoaded', function() {
+        var source = Array.prototype.slice.call(document.querySelectorAll('picture > source'));
+        var image = document.querySelector('.picture__big');
+        image.src = source[1].dataset.srcset;
+      });
     </script>
    </body>
  </html>
